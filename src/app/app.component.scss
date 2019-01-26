@@ -1,23 +1,4 @@
-.upload-btn {
-    text-align: center; 
-    background-color:green; 
-    color:white;
-    left:40%;
-    top:100%;
-}
-
-.home-img{
+.homepage {
+    overflow: hidden;
     height: 100vh;
-    width: 100%;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-h1{
-    color:white;
 }
