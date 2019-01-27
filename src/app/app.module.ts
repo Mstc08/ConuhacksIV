@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InformationComponent } from './information/information.component';
 import { FileDropModule } from 'ngx-file-drop';
 import { UploadComponent } from './upload/upload.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UploadComponent } from './upload/upload.component';
     HomeComponent,
     NavBarComponent,
     InformationComponent,
-    UploadComponent
+    UploadComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
