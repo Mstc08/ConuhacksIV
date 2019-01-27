@@ -8,3 +8,20 @@ html, body {
     width: 100%;
     margin: 0 auto;
 }
+
+
+app-upload .center {
+    padding: 2rem;
+    #dropZone {
+        border: 2px solid #0782d0 !important;
+        height: 15rem !important; 
+
+        .content {
+            position: absolute !important;
+            top:35% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }   
+    }
+}
+
