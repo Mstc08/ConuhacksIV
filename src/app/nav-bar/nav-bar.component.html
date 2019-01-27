@@ -1,5 +1,6 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Custom Toolbar</span>
-    </mat-toolbar-row>
+    <!-- <mat-toolbar-row> -->
+      <a routerLink="/home" routerLinkActive="active"><button mat-button class="nav-btn" (click)="homeClick();">Home</button></a>
+      <a routerLink="/information" routerLinkActive="active"><button mat-button class="nav-btn" (click)="infoClick();">Information</button></a>
+    <!-- </mat-toolbar-row> -->
 </mat-toolbar>
