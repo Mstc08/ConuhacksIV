@@ -1,2 +1,4 @@
-<h1>Here is your result:</h1>
-<pre>Data Obtained is: {{ data }}</pre>
+<h1>Results:</h1>
+<pre>Item: {{ result.material_title }}</pre>
+<pre>Disposability: {{ result.stream_title }}</pre>
+<pre *ngIf="result.special_instructions">Special instructions: {{ result.special_instructions }}</pre>

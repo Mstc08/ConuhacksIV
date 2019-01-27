@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule, MatToolbarModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { ResultComponent } from './result/result.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FileDropModule,
     MatButtonModule,
     MatToolbarModule
