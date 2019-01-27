@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileSystemDirectoryEntry, FileSystemFileEntry, UploadFile, UploadEvent } from 'ngx-file-drop';
+import { Router } from '@angular/router';
+import { ImageAnalyzerService } from '../image-analyzer.service';
 
 @Component({
   selector: 'app-upload',
@@ -8,7 +10,7 @@ import { FileSystemDirectoryEntry, FileSystemFileEntry, UploadFile, UploadEvent 
 })
 export class UploadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private imageAnalyzer: ImageAnalyzerService) { }
 
   ngOnInit() {
   }
@@ -27,6 +29,13 @@ export class UploadComponent implements OnInit {
           // Here you can access the real file
           console.log(droppedFile.relativePath, file);
 
+          this.imageAnalyzer.postImage(file).subscribe((res) => {
+            let data = {
+              image: file,
+              result: res
+            }
+            this.router.navigate(['result', data]);
+          });
           /**
           // You could upload it like this:
           const formData = new FormData()
