@@ -32,9 +32,9 @@ export class UploadComponent implements OnInit {
           this.imageAnalyzer.postImage(file).subscribe((res) => {
             let data = {
               image: file,
-              result: res
+              result: {material_name: "Testing"}
             }
-            this.router.navigate(['result', data]);
+            this.router.navigate(['/result', data]);
           });
           /**
           // You could upload it like this:

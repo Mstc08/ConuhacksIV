@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-result',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: any;
+
+  constructor(private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
+    var sub = this.route
+      .queryParams
+      .subscribe(params => {
+        this.data = +params['data'] || 0;
+      })
   }
 
 }
