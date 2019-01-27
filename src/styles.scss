@@ -9,7 +9,6 @@ html, body {
     margin: 0 auto;
 }
 
-
 app-upload .center {
     padding: 2rem;
     #dropZone {
@@ -21,7 +20,12 @@ app-upload .center {
             top:35% !important;
             left: 50% !important;
             transform: translate(-50%, -50%) !important;
+            font-family: 'Righteous', cursive;
+            font-size: 1.5rem;
         }   
     }
 }
 
+.righteous-font {
+    font-family: 'Righteous', cursive;
+}
