@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Custom Toolbar</span>
-    </mat-toolbar-row>
+    <!-- <mat-toolbar-row> -->
+      <a mat-button routerLink="/home" routerLinkActive="active" class="nav-btn">Home</a>
+      <a mat-button routerLink="/information" routerLinkActive="active" class="nav-btn">Information</a>
+    <!-- </mat-toolbar-row> -->
 </mat-toolbar>
+<router-outlet></router-outlet>
